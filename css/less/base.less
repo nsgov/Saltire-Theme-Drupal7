@@ -1,0 +1,310 @@
+@import 'normalize.less';
+@import 'CSS3.less';
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////// CONFIG ///////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+//Shades
+@white: #FFF;
+@lightgrey: #f0f0f0;
+@grey: #999;
+@darkgrey: #333;
+@black: #000;
+
+//text color
+@text: #333; //text
+
+//theme colors
+@navyblue: #1A4E91;
+@logoblue: #0068b8;
+@skyblue: #57B4D2;
+@green: #95C76F;
+@yellow: #F1CC65;
+@red: #E05C61;
+@visited: #776688;
+
+//selection color
+@select: @skyblue;
+
+//font stack
+@sans: 'open_sansregular', Helvetica, Arial, Tahoma, sans-serif;
+@serif: 'pt_serifregular', "Palatino Linotype", Palatino, serif;
+@sanslight: 'open_sanslight', Helvetica, Arial, Tahoma, sans-serif;
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////// GENERAL //////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+::-moz-selection, ::selection { background: @select; color: #fff; text-shadow: none; }
+
+body                          { font-family: @sans; font-size: 1em; line-height: 1.5; color: @text; text-align: center;}
+
+a{
+  color: @logoblue;
+  &:visited { color: @visited;}
+  &:active { color: darken(@green, 20%);}
+}
+
+h1                            { font-size: 3em; line-height: 1;}
+h2                            { font-size: 2.5em; line-height: 1.125; clear: both;}
+h3                            { font-size: 2em; line-height: 1.25;}
+h4                            { font-size: 1.5em; line-height: 1.35; }
+h5                            { font-size: 1.15em; line-height: 1.5; }
+h6                            { font-size: 1em; line-height: 1.5; }
+h1, h2, h3, h4, h5, h6        { margin: .5em 0 0.5em 0; color: @navyblue; font-weight: 300; font-family: @sanslight; clear: both; }
+h1 + h2, h2 + h3, h3+ h4, h4 + h5, h5 + h6, h1:first-child { margin-top: 0;}
+
+h1 {
+  &:after{ clear: both; }
+}
+
+footer h2 { color: @skyblue; }
+
+abbr, small, dialog, caption  { font-size: 0.75em; }
+ul, ol                        { margin: 1em 0; padding-left: 2em; }
+li ul, li ol                  { margin: 0; padding-left: 1em;}
+
+p                             { word-spacing: 0; margin-bottom: 1em; line-height: 1.75; clear: both;}
+p+p                           { text-indent: 0; }
+pre                           { }
+ul, ol, dl, dialog            { margin-top: 0; }
+
+figure.quote{
+  padding-left: 2em;
+  margin: 1em 0;
+
+  blockquote{
+    font-size: 2em;
+    font-style: italic;
+
+    &:before{
+      content: '“';
+    }
+
+    &:after{
+      content: '”';
+    }
+  }
+  figcaption{
+    font-size: 0.875em;
+    color: @grey;
+  }
+}
+
+figure, img{
+  max-width: 100%;
+  height: auto;
+}
+
+table                         { width: 100%; margin-bottom: 1em; }
+th, td                        { border-top: solid 1px @lightgrey; padding: 0.25em 0.25em 0; vertical-align: top; }
+tr:nth-child(odd) td          { background: lighten(@lightgrey, 4%); }
+th                            { font-size: 0.875em; border-top: 0; border-bottom: solid 1px darken(@lightgrey, 10%); text-align: left; color: @black; }
+
+form                          { overflow: visible; }
+fieldset                      { margin-bottom: 1em; }
+legend                        { padding: 0 0.5em; }
+label                         { line-height: 1; }
+input, textarea {
+  margin-bottom: 0.5em;
+  line-height: 1.25;
+  .border-radius(3px);
+
+  &:focus{
+    .box-shadow(~"0 0 0 4px rgba(172, 202, 223, 0.5)");
+  }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="select"],
+input[type="search"],
+input[type="url"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="datetime"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="number"],
+input[type="range"],
+input[type="color"]           { padding: 0.5em 0.5em 0.25em; border: solid 1px @grey; }
+input[type="radio"],
+input[type="checkbox"]        { vertical-align: top; margin: 0.25em 0.5em 0 0; }
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  padding: 0.5em 1em 0.25em;
+  background-color: @lightgrey;
+  border: solid 1px darken(@skyblue, 2%);
+  color: @white;
+  border-radius: 5px;
+  .box-shadow(~"inset 1px 1px 0 0 rgba(255, 255, 255, 0.3)");
+  .gradient(@skyblue, lighten(@skyblue, 7%), 0deg);
+
+  &:hover, &.focus{
+    background-color: lighten(@skyblue, 5%);
+    .gradient(lighten(@skyblue, 5%), lighten(@skyblue, 12%), 0deg);
+  }
+
+  &:active{
+    background-color: lighten(@skyblue, 12%);
+    .box-shadow(~"inset 0 0 5px 0 rgba(0, 0, 0, 0.35)");
+  }
+}
+
+textarea { overflow: auto; line-height: 1.5;}
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////// LAYOUT ///////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+header, footer, #main, div.breadcrumb, nav {text-align: left; width: 98%; padding: 0 1%;}
+
+header { background-color: @logoblue;
+
+  div { max-width: 70em; margin: 0 auto;
+	    
+	    img { margin: 20px 0 20px 0; max-width: 100%;  max-height: 2.5em; }
+    }
+}
+
+
+footer { background-color: @logoblue;
+
+  div {	max-width: 70em; margin: 0 auto; padding: 20px 0; color: #fff; display: block;
+  		
+  		a, a:active, a:visited {color: #fff;}
+  	}
+}
+
+
+#main { width: 98%; max-width: 70em; margin: 1em auto 2em auto; padding: 0 1%; }
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////// NAVIGATION ///////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+nav {
+  width: 98%; background-color: @navyblue; display: block; padding: 0 1%;
+  
+  	ul { max-width: 70em; margin: 0 auto;
+	  	
+	  	li { list-style: none; display: inline-block;
+		  	
+		  	a, a:visited { color: @white; display: block; margin: 10px 5em 10px 0; display: block; text-decoration: none;}
+	  	}
+  	}
+	
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////// BLOCKS ///////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+nav.breadcrumb {background-color: @white;
+	
+	div {max-width: 70em; margin: 10px auto;}
+	
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////// BLOCKS ///////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+.view-homepage-grid .views-row {width: 46%; display: inline-block; margin: 0 2% 2% 0;}
+.view-homepage-grid .views-row h2 {}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////// PAGINATION ///////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+.pager{
+  list-style: none; 
+  padding: 0.5em 0;
+  margin: 4em auto;
+  .clearfix();
+  text-align: center;
+
+  li{
+    display: inline-block;
+    max-width: 33%;
+
+    &.pager-previous{
+      text-align: left;
+      padding: 10px;
+    }
+
+    &.pager-current{
+      text-align: center;
+      background: @darkgrey;
+      color: #fff;
+      padding: 10px;
+    }
+
+    &.pager-next{
+      text-align: right;
+      padding: 10px;
+    }
+    
+    &.pager-item{
+	    background: @logoblue;
+	    text-align: center;
+	    
+	    	a {color: #fff; display: block; padding: 10px;}
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////// ACCESSIBILITY ////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+.skip-links {height: 0; position: absolute;  width: 100%; z-index: 2; padding: 0;}
+
+.skip-to-link {
+  background: #0068b8;
+  border: 6px double #fff;
+  border-radius: 1em;
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  margin: 0.5em auto;
+  padding: 0.5em;
+  position: absolute;
+  text-align: center;
+  top: -9em;
+  width: 12em;
+
+  &:focus {
+    position: static;
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: #fff;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

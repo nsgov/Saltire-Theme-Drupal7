@@ -1,0 +1,408 @@
+//////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////// CONFIG ///////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+//Shades
+@white: #FFF;
+@lightgrey: #f0f0f0;
+@grey: #999;
+@darkgrey: #333;
+@black: #000;
+
+//text color
+@text: #333; //text
+
+//theme colors
+@navyblue: #00406f;
+@logoblue: #0068b8;
+@highlightblue: #4dd2ff;
+@yellow: #ffe070;
+@visited: #776688;
+
+//selection color
+@select: @highlightblue;
+
+@sans: 'latoregular', Helvetica, Arial, Tahoma, sans-serif;
+@serif: 'roboto_slablight', "Palatino Linotype", Palatino, serif;
+
+
+/////////////////// RESPONSIVE NAV ////////////////////////////////////////////////////////////////
+
+	#global-navigation {
+		ul {
+			.clearfix();
+	
+			li {
+				float: left;
+				width: auto;
+	
+				&.search-form { width: 100%; }
+	
+				a { padding: 0.35em 0.5em; }
+			}
+		}
+		form {
+			padding: 0.75em 2% 0.5em;
+	
+			input { width: 65%; }
+		}
+	
+		.trigger{ left: 90%; }
+	}
+
+	#main-navigation {
+		li {
+			width: auto;
+			list-style: none;
+		
+			ul { display: none; }
+		}
+	
+		a {
+			color: @white;
+			display: inline-block;
+			font-variant: small-caps;
+			letter-spacing: 1px;
+			line-height: 1;
+			margin-right: 10%;
+			padding: .95em 1em;
+			text-decoration: none;
+	
+			&:hover {color: @highlightblue;}
+		}
+		li:first-child a { padding-left: 0; }
+	}
+	
+	#global-navigation {
+		li {
+			&.search-form{
+				float: right;
+				width: 35%;
+			}
+		}
+		form {
+			border: 0;
+			padding: 0;
+			background: @navyblue;
+			
+			input{
+				width: 60%;
+			}
+		}
+		.trigger {
+			height: auto;
+			width: auto;
+			background: @navyblue;
+			left: 80%;
+			text-indent: 0;
+			color: @white;
+			text-decoration: none;
+			font-size: 0.8125em;
+			line-height: 2;
+			padding: 0.25em 2em 0.25em 0.5em;
+			
+			&:after{
+				left: auto;
+				right: 0.5em;
+			}
+		}
+	}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////// BIG PHONES - TINY TABLETS ////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+  .home{
+    section{
+      .clearfix();
+    }
+
+    .features + div{
+      float: left;
+      width: 48%;
+      margin: 0 4% .5em 0;
+
+      & + div{
+        float: left;
+        width: 48%;
+        margin: 0 0 1em;
+      }
+    }
+
+    .quicklinks, .featuredsites{
+      ul{
+        .clearfix();
+      }
+
+      li{
+          float: left;
+          width: 48%;
+
+          &:nth-child(2n+1){
+            margin: 0 4% 0 0;
+            clear: left;
+          }
+
+          form{
+            input{
+              width: 55%;
+            }
+
+            button{
+              padding-left: 0.25em;
+              padding-right: 0.25em;
+            }
+          }
+        }
+    }
+
+    .featuredsites{
+      .clearfix();
+
+        li {
+          background-color: lighten(@navyblue, 70%);
+        }
+    }
+  }
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////// TABLETS //////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+ .directory {margin-bottom: 1em; overflow: hidden;
+			      	li {float: left; margin-right: 3%; width: 46%;}
+			      }	
+
+#banner-wordmark {width: 256px; height: 41px;}
+
+  header + div{
+    .clearfix();
+
+    & > nav{
+      float: left;
+      width: 25%;
+      margin: 0 3% 0 0;
+      font-family: @sans;
+
+      ul{
+        display: block;
+        list-style: none;
+        padding: 0;
+
+        li{
+          border-top: solid 1px @lightgrey;
+
+          a{
+            display: block;
+            padding: 0.125em 0.25em;
+            text-decoration: none;
+
+            &:hover{
+              color: @navyblue;
+            }
+
+            &.ancestor, &.current{
+              background: @lightgrey;
+            }
+          }
+
+          ul{
+            padding: 0 0 0.5em 1em;
+
+            &.collapsed{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .breadcrumbs{
+      display: block;
+      float: left;
+      width: 72%;
+  }
+
+  #main{
+    float: left;
+    width: 72%;
+    font-size: 1.125em;
+  }
+
+  .home{
+    section{
+      .clearfix();
+    }
+
+    .features{
+      float: left;
+      width: 63%;
+    }
+
+    .features + div{
+      float: left;
+      width: 35%;
+      margin: 0 0 0 2%;
+
+      & + div{
+        clear: both;
+        width: 100%;
+      }
+    }
+
+    .panel{
+      float: left;
+      font-size: 1.2em;
+      padding: 3% 1%;
+      width: 47%;
+    }
+
+    .premier{
+      clear: left;
+    }
+
+    .services{
+      margin: 0 0 1em 2%;
+    }
+
+    .legislature{
+      clear: left;
+    }
+
+    .twitter{
+      margin: 0 0 1em 2%;
+    }
+  }  
+
+	footer nav {
+		ul { overflow: hidden; }
+		li {
+			float: left;
+			margin: 0 3em 0.25em 0;
+		}
+	}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////// DESKTOP //////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+#banner-wordmark {width: 256px; height: 41px;}
+
+header > div, header > nav > div, footer > div, header + div {
+	min-width: 62em;
+	max-width: 80em;
+	margin: 0 auto;
+}
+
+#main-navigation, #global-navigation {
+	div {
+		position: relative;
+	}
+}
+
+#global-navigation {
+	.trigger{
+		left: auto;
+		right: 0;
+	}
+}
+
+  header + div > nav{
+    width: 19%;
+    margin: 0 4% 0 0;
+  }
+
+  .breadcrumbs{
+    width: 77%;
+  }
+
+  #main{
+    width: 77%; padding-left: 1em;
+
+    & > div{
+      float: left;
+      width: 70%;
+      margin: 0 (4% * (100/77)) 0 0;
+    }
+
+  }
+
+  .home{
+
+    .features{
+      float: left;
+      width: 48.3%;
+    }
+
+    .features + div{
+      width: 28.5%;
+      margin: 0 0 0 2%;
+
+      & + div{
+        clear: none;
+        float: right;
+        width: 20%;
+        margin: 0;
+      }
+    }
+
+    .weather{
+      padding: 5%;
+    }
+
+    .panel{
+      margin: 0 0 1em;
+      padding: 8% 5%;
+      width: auto;
+      float: none;
+      clear: none;
+    }
+
+    .twitter {
+      padding: 16px 5%;
+    }
+
+    .quicklinks, .featuredsites{
+      margin-left: -2%;
+      ul{
+        .clearfix();
+      }
+      li{
+          width: 31%;
+          margin: 0 0 2em 2%;
+
+          &:nth-child(2n+1){
+            margin: 0 0 1em 2%;
+            clear: none;
+          }
+
+          &:nth-child(3n+1){
+            margin: 0 0 2em 0;
+            clear: left;
+          }
+      }
+    }
+
+    .featuredsites{
+      h2 { margin-left: 2%; }
+      li {
+          width: 27%;
+          padding: 2%;
+      }
+    }
+  }
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////// IE ///////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+//fix for IE font rendering
+  body{ opacity:.9999; }
+  h1                            { font-size: 2.25em; }
+  h2                            { font-size: 1.75em; }
+  h3                            { font-size: 1.5em; }
+  h4                            { font-size: 1.25em; }
+

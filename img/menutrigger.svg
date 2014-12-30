@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0" y="0" width="28" height="24" viewBox="0 0 28 24" xml:space="preserve">
+<g>
+	<rect x="1.178" y="1.463" fill="#FFFFFF" width="4.992" height="5.088"/>
+	<rect x="9.243" y="1.463" fill="#FFFFFF" width="17.952" height="5.088"/>
+	<rect x="1.178" y="9.463" fill="#FFFFFF" width="4.992" height="5.088"/>
+	<rect x="9.243" y="9.463" fill="#FFFFFF" width="17.952" height="5.088"/>
+	<rect x="1.178" y="17.463" fill="#FFFFFF" width="4.992" height="5.088"/>
+	<rect x="9.243" y="17.463" fill="#FFFFFF" width="17.952" height="5.088"/>
+</g>
+</svg>

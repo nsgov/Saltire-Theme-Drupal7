@@ -1,0 +1,226 @@
+/* ====================================================
+	NOVASCOTIA.CA/NEWS
+	
+	This CSS file contains overrides specific to 
+	the News section of the website.
+	
+==================================================== */
+
+
+
+/* ====================================================
+	GENERAL STYLES
+==================================================== */
+
+/* Pull in styles for the photo/video player on social media releases 
+@import url(mediaviewer.css);*/
+
+/* Force the footer to clear the content area */
+footer { clear:both; }
+
+/* Make main the full width, for News - columns will be inside <main> */
+#main {width: 100%;}
+
+/* Style the Drupal View/Edit tabs to be buttons, hides the View tab when you are in View mode */
+#main ul.tabs {margin: 1em 0; padding: 0; float: right;}
+#main ul.tabs li {list-style: none; display: inline-block; margin: 0px 20px 0 0; padding: 0; float: right;}
+#main ul.tabs li.active {display: none;}
+#main ul.tabs li a {text-decoration: none;
+padding: .25em 1em;
+border: solid 1px #003a65;
+color: #fff;
+border-radius: 5px;
+-webkit-box-shadow: inset 1px 1px 0 0 rgba(255,255,255,.3);
+-moz-box-shadow: inset 1px 1px 0 0 rgba(255,255,255,.3);
+box-shadow: inset 1px 1px 0 0 rgba(255,255,255,.3);
+background-color: #007cdc;}
+#main ul.tabs li a:hover {background-color: #00406f;}
+
+/* Blockquote style */
+#main blockquote * { quotes: ''; overflow: visible; font-style: italic; color: #444}
+#main blockquote:before { content: '\201C'; float: left; font-size: 5em; line-height: 1em; margin: 0 0 -.8em -.5em; color: #666; font-family: serif;}
+#main blockquote p:after { content: '\201D'; display: inline;}
+
+.breadcrumb {width: 100%; float: none;}
+
+/* Animated throbber */
+html.js input.form-autocomplete {
+  background-image: url(/armdale/sites/all/themes/bridgewater/img/ajax-loader.gif);
+  background-position: 100% -22px; /* LTR */
+  background-repeat: no-repeat;
+}
+html.js input.throbbing {
+  background-position: 98% 2px; /* LTR */
+}
+
+
+/* Microcalendar Style Overrides */
+
+#ui-datepicker-div {font-size: .8em; color: #000;}
+.ui-datepicker table {background: #f0f0f0;}
+
+/* ALERTBOX */
+
+#block-views-alertbox-block {background-position: 8px 8px; /* LTR */
+  background-repeat: no-repeat;
+  border: 1px solid;
+  margin: 6px 0;
+  padding: 10px 10px 10px 50px; margin: 10px auto 1em auto; background-color: #fffce5; color: #840; border: 1px solid #ed5;  background-image: url(/armdale/misc/message-24-warning.png);}
+#block-views-alertbox-block h2 {display: none;}
+#block-views-alertbox-block .views-field-title {font-size: 1em; margin: 0; padding: 0px;}  
+
+/* STATUS */
+
+div.status {position: fixed; top: 50%; left: 30px; font-size: 13em; z-index: 999; opacity: .5; color: #ccc;}
+
+/* Hide Preview Button - Added to end of admin theme (/themes/seven/style.css) */
+
+#edit-preview.form-submit {display: none;}
+
+/* Hide Duplicate Start Upload Button on PC  - Added to end of admin theme (/themes/seven/style.css)*/
+a.plupload_start {display: none;}
+
+/* ====================================================
+	VIEWS and BLOCKS
+==================================================== */
+
+
+        
+  
+/* Responsive Grid View */
+.view-news-archive .views-row,
+.view-taxonomy-term .views-row  {display: block; vertical-align: top; width: 98%; height: auto; margin: 1%; padding: 0; background: #fff; border: 1px solid #fff; overflow: hidden; position: relative;	}
+.view-news-archive .views-row:hover,
+.view-taxonomy-term .views-row:hover {background: transparent;}    
+main .view-news-archive .views-field-field-additional-photos img,
+main .view-taxonomy-term .views-field-field-additional-photos img {width: 100%; height: 100%; display: block; clear: both; padding: 1px 0; overflow: hidden; float: none; margin: 2% 3%;}    
+.view-news-archive .views-field-title,
+.view-taxonomy-term .views-field-title {color: #004A87; font-size: 1.2em; line-height: 1.2em; font-family: 'open_sanslight', Helvetica, Arial, Tahoma, sans-serif; margin: 2% 3%;}      
+.view-news-archive .views-field-title a,
+.view-taxonomy-term .views-field-title a {color: #004A87; text-decoration: none;}  
+.view-news-archive .views-field-title a:hover,
+.view-taxonomy-term .views-field-title a:hover {text-decoration: underline;}
+.view-news-archive .views-field-field-date,
+.view-taxonomy-term .views-field-field-date {font-size: .75em; margin: 1% 3%; line-height: 1em; color: #666;}
+.view-news-archive .department,
+.view-taxonomy-term .department  {font-size: .75em; margin: 1% 3%;}
+.view-news-archive .views-field-field-press-release, 
+.view-taxonomy-term .views-field-field-press-release {font-size: .9em; margin: 1% 3%; display: block;}
+main .view-news-archive .views-field-field-additional-photos img.gridicon,
+main .view-news-archive .views-field-field-additional-photos img.gridicon {width: 17px; height: 15px; display: inline; position: relative; top: 3px; margin: 0px; padding: 1px;}
+
+/* News view - list view with media icons */
+.view-news .views-row {border-bottom: 1px solid #ccc; padding: 2% 0;}
+.view-news .views-field-title {padding: 10px 10px 0 0px; width:80%; display: inline-block; margin: 0; line-height: 1em;}
+.view-news .views-field-created {padding: 0px 10px 0px 0px; width: 80%; display: inline-block; font-size: .8em; margin: 0;}
+.view-news .views-field-field-select-department-s- {padding: 0px 10px 0px 0px; width: 80%; display: inline-block; font-size: .8em;}
+.view-news .views-field-field-summary {padding: 0px 10px 10px 0px; font-size: .8em;}
+.view-news .views-field-field-press-release {padding: 0px 10px 10px 0px; font-size: .8em;}
+.view-news .views-field-field-additional-photos,
+.view-news .views-field-field-audio-clip,
+.view-news .views-field-field-video {margin: 1% 1% 0 0;}
+
+
+/* News Archive & News view - Exposed filter block (Search) */
+#block-views-exp-news-page,
+#block-views-exp-news-archive-page {}
+#block-views-exp-news-page .description,
+#block-views-exp-news-archive-page .description {font-size: .6em;}
+#block-views-exp-news-page label,
+#block-views-exp-news-archive-page label {font-weight: bold; font-size: .9em;}
+#block-views-exp-news-page input,
+#block-views-exp-news-archive-page input {font-size: .75em;}
+#edit-date-filter-min-datepicker-popup-1,
+#edit-date-filter-max-datepicker-popup-1 {width: 6em;}
+#edit-date-filter-min-wrapper,
+#edit-date-filter-max-wrapper,
+#edit-field-date-value-min-wrapper,
+#edit-field-date-value-max-wrapper {width: 5em; display: inline-block; margin: 0 1em 0 0;}
+#edit-field-select-department-s-tid {width: 15em; height: .8em;}
+#block-views-exp-news-page .form-type-date-popup label,
+#block-views-exp-news-archive-page .form-type-date-popup label {font-size: .6em;}
+#block-views-exp-news-page .form-type-date-popup input,
+#block-views-exp-news-archive-page .form-type-date-popup input {font-size: .6em; width: 7em;}
+#block-views-exp-news-archive-page .views-submit-button {clear: both; display: block;}
+main .view-id-news {padding: 3px 0;}
+main .view-id-news .views-row:hover {background-color: #ffe070;}
+main .views-field-field-additional-photos,
+main .views-field-field-audio-clip,
+main .views-field-field-video {width: 100%; float: none;}
+
+
+/* ====================================================
+	CONTENT
+==================================================== */
+
+/* News Release Content Type */
+.newscontent {width: 100%; float: none;}
+.newscontent .date {font-size: .8em; color: #666; margin: 0px; padding: 0px;}
+.newscontent .news .field-label {font-size: 1.5em; font-family: 'roboto_slablight',"Palatino Linotype",Palatino,serif; font-weight: 300; color: #005593;}
+.newscontent .field-name-field-select-department-s- {margin-bottom: 1em;}
+.newscontent li {margin-bottom: 1.25em;}
+.newsdetail {width: 100%; float: none; margin-left: 0;}
+.newsdetail .field-label {font-size: 1.15em; font-weight: 300; color: #005593;}
+.newsdetail .field {margin: 0 0 1em 0;}
+.newsdetail .field-name-field-categories .field-item {display: inline; padding-right: .5em;}
+.newscontent .field-name-field-select-department-s- a,
+.newsdetail .field-name-field-categories .field-item a {background-color: transparent; padding: 2px;}
+.newsdetail .field-name-field-audio-clip .field-item {margin-bottom: 1em;}
+
+.broadcastcopy { font-size: 0.85em; margin-top: 1em; margin: 1em 0; padding: 0 30px; font-family: monospace;}
+
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////// BIG PHONES - TINY TABLETS ////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media only screen and (min-width : 30em) {
+.view-news-archive .views-row,
+.view-taxonomy-term .views-row {display: inline-block; vertical-align: top; width: 46%; height: auto; margin: 1%; padding: 0; background: #fff; border: 1px solid #fff; overflow: hidden;}
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////// TABLETS //////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media only screen and (min-width : 48em) {
+
+.view-news-archive .views-row,
+.view-taxonomy-term .views-row {display: inline-block; vertical-align: top; width: 46%; height: auto; margin: 1%; padding: 0; background: #fff; border: 1px solid #fff; overflow: hidden;}
+
+
+.newscontent {width: 70%; float: left;}
+.newsdetail {width: 25%; float: left; margin-left: 2%;}
+
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////// DESKTOP //////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media only screen and (min-width: 60em) {
+
+.view-news-archive .views-row,
+.view-taxonomy-term .views-row {display: inline-block; vertical-align: top; width: 28%; height: 16em; margin: 1%; padding: 0; background: #fff; border: 1px solid #fff; overflow: hidden;}
+
+.newscontent {width: 70%; float: left;}
+.newsdetail {width: 25%; float: left; margin-left: 3%;}
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////// LUXURY //////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media only screen and (min-width: 80em) {
+
+.view-news-archive .views-row,
+.view-taxonomy-term .views-row {display: inline-block; vertical-align: top; width: 28%; height: 20em; margin: 1%; padding: 0; background: #fff; border: 1px solid #fff; overflow: hidden;}
+main .view-news-archive .views-field-field-additional-photos img,
+main .view-taxonomy-term .views-field-field-additional-photos img {width: 100%; display: block; clear: both; padding: 1px 0; overflow: hidden; float: none;}  
+
+
+}
+
