@@ -1,8 +1,12 @@
-Saltire web template is Copyright 2014 Government of Nova Scotia and distributed under MIT License
+Saltire web template is Copyright 2014 Province of Nova Scotia and distributed under MIT License
+
+The Nova Scotia logo and graphical elements of this theme are protected by trademark and copyright 
+laws. They must be used in accordance with the Province of Nova Scotia's Visual Identity Program.
+Learn more at http://novascotia.ca/cns/ .
 
 Other software in this collection includes:
 Web Experience Toolkit (WET) is Copyright (c) 2014 Government of Canada distributed under MIT License
-Robot font family created by Christian Robertson is distributed under Apache License, version 2.0 
+Roboto font family created by Christian Robertson is distributed under Apache License, version 2.0 
 
 MIT License
 
