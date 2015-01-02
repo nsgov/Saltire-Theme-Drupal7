@@ -28,7 +28,7 @@
 	<!--[if lt IE 9]>
 	<link href="<?php echo $theme_base; ?>/assets/favicon.ico" rel="shortcut icon" />
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/ie8-wet-boew.css" />
-	<script src="<?php echo $theme_base; ?>/js/ie8-wet-boew2.js"></script>
+	<script src="<?php echo $theme_base; ?>/js/ie8-wet-boew.js"></script>
 	<![endif]-->
 
 	<noscript><link rel="stylesheet" href="<?php echo $theme_base; ?>/css/noscript.css"/></noscript>
