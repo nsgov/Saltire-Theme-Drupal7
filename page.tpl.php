@@ -22,7 +22,7 @@
 					</div>
 
 					<section class="wb-mb-links col-xs-6 visible-sm visible-xs" id="wb-glb-mn">
-						<h2>Search and menus</h2>
+						<h2 class="element-invisible">Search and menus</h2>
 						<ul class="pnl-btn list-inline text-right">
 							<li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk btn btn-sm btn-default" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Search and menus</span></span></span></a></li>
 						</ul>
@@ -42,7 +42,7 @@
 
 			<div id="wb-sm" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"> <!-- data-ajax-fetch="/sitemenu.html" -->
 				<div class="container nvbar">
-	<h2>Topics menu</h2>
+	<h2 class="element-invisible">Topics menu</h2>
     <div class="row">
         <!-- ul class="list-inline menu" --> 
 		<nav role="navigation" id="main-navigation" aria-label="main navigation" class="list-inline menu">

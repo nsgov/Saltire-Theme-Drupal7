@@ -252,20 +252,18 @@ img.left {float: left; margin: 0px 2px 2em 0em;}
 aside.sidebar_first {display: inline-block; vertical-align: top;}
 #block-menu-block-1 ul.menu {margin: .5em 5% 0 0; padding: 0; display: block;}
 #block-menu-block-1 ul.menu li {list-style: none; margin: 0; padding: 0;}
-#block-menu-block-1 ul.menu li {background: #f0f0f0;}
-#block-menu-block-1 ul.menu li:hover,
-#block-menu-block-1 ul.menu li:focus {background: #4B4B4B; color: #fff}
-#block-menu-block-1 ul.menu li:hover a,
-#block-menu-block-1 ul.menu li:focus a {color: #fff;}
-#block-menu-block-1 ul.menu li a {color: #2750A0; padding: 20px; display: block; text-decoration: none;}
+#block-menu-block-1 ul.menu li a {color: #2750A0; padding: 5px 20px 5px 0; display: block; text-decoration: none;}
 #block-menu-block-1 ul.menu li a:hover,
-#block-menu-block-1 ul.menu li a:focus {color: #fff; background: #4B4B4B; text-decoration: underline;}
+#block-menu-block-1 ul.menu li a:focus {text-decoration: underline; background: transparent;}
 #block-menu-block-1 ul.menu li ul.menu {margin: 0 0 0 10px; padding: 0; background: transparent;}
 #block-menu-block-1 ul.menu li ul.menu li {background: transparent;}
-#block-menu-block-1 ul.menu li ul.menu li a {padding: 10px;}
+#block-menu-block-1 ul.menu li ul.menu li a {padding: 3px 10px;}
 #block-menu-block-1 ul.menu li ul.menu li:hover,
 #block-menu-block-1 ul.menu li ul.menu li:focus {}
-#block-menu-block-1 ul.menu li ul.menu li a:before {content: "\e092"; color: #333; font-family: "Glyphicons Halflings"; font-size: 0.7em; margin: 0 7px 0 0; display: inline; text-decoration: none;}
+#block-menu-block-1 ul.menu li.collapsed a:before {content: "\e080"; color: #333; font-family: "Glyphicons Halflings"; font-size: 0.6em; margin: 0 4px 0 -14px; display: inline; text-decoration: none;}
+#block-menu-block-1 ul.menu li.expanded a:before {content: "\e114"; color: #333; font-family: "Glyphicons Halflings"; font-size: 0.6em; margin: 0 4px 0 -14px; display: inline; text-decoration: none;}
+#block-menu-block-1 ul.menu li.expanded ul.menu li a:before {content: none;}
+#block-menu-block-1 ul.menu li a.active {font-weight: bold;}
 
 div.with_sidebar_first {width: 68%; display: inline-block;}
 

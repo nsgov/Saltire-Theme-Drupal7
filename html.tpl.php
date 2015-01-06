@@ -28,8 +28,27 @@
 	<!--[if lt IE 9]>
 	<link href="<?php echo $theme_base; ?>/assets/favicon.ico" rel="shortcut icon" />
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/ie8-wet-boew.css" />
+	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/ie8-theme.css" />
 	<script src="<?php echo $theme_base; ?>/js/ie8-wet-boew.js"></script>
+
+	<script lang="javascript">
+$(function(){		
+	if(!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Shape", "1.0")){
+		var imgs = $('img'),
+			endsWithDotSvg = /.*\.svg$/,
+			l = imgs.length;
+		for(var x = 0; x !== l; ++x) {
+			if(imgs[x].src.match(endsWithDotSvg)) {
+				imgs[x].src = imgs[x].src.slice(0, -3) + 'png';
+			}
+		}
+	}
+
+});		
+	</script>
+	
 	<![endif]-->
+
 
 	<noscript><link rel="stylesheet" href="<?php echo $theme_base; ?>/css/noscript.css"/></noscript>
 <!-- / From WET -->
