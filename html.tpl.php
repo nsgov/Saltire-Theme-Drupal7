@@ -4,13 +4,10 @@
 	$secure = 'http' . (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? 's' : '') . '://';
     $theme_base = str_replace('http://', $secure, $theme_base);
 ?>
-<!-- From WET -->
 <!DOCTYPE html>
-<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js" lang="en" dir="ltr">
 <head>
-<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title><?php print $head_title; ?></title>
 	<meta content="width=device-width, initial-scale=1" name="viewport"/>
 	<meta name="HandheldFriendly" content="True" />

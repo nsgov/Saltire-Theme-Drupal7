@@ -326,7 +326,7 @@ body {background: url(../img/bg-hdr-sm.png) center top no-repeat #fff;}
 #mb-pnl nav a.wb-navcurr, #mb-pnl nav summary.wb-navcurr {outline: none; color: #00abf0;}
 
 #mb-pnl details ul {}
-#mb-pnl {background: #fff url(../img/bg-mb-pnl.svg) left top no-repeat;}
+#mb-pnl {background: #fff url(../img/bg-mb-pnl.svg) left top no-repeat; height: auto;}
 #mb-pnl header {background: transparent; color: #2750a0; border: none;}
 #mb-pnl header .modal-title {display: none;}
 #sm-pnl {background-color: #fff; color: #2750a0;}
@@ -350,9 +350,6 @@ body {background: url(../img/bg-hdr-sm.png) center top no-repeat #fff;}
   [dir=rtl] #wb-glb-mn .pnl-btn span .glyphicon-th-list {padding-left: 0; padding-right: 10px; }  
 
 
-  #block-menu-block-1 {display: none;}
-  aside.sidebar_first {width: 100%; display: block;}
-  div.with_sidebar_first {width: 100%; display: block;}
 }
 
 /* Medium view and under */
