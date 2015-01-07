@@ -56,7 +56,7 @@ header nav#wb-bc {background-color: transparent;}
 #wb-bc li:first-child:before, [dir=rtl] #wb-bc li:before, [dir=rtl] #wb-bc li:first-child:after {content: none; padding: 0; }
 
 body > header {background-color: transparent;}
-
+ 
 #wb-srch {padding-top: 40px;}
 #wb-srch form {overflow: hidden;}
 #wb-srch input#gsa {width: 200px; background: #fff; border: 2px solid #fff; padding: 3px 5px; color: #727272;} 
