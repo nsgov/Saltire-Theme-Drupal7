@@ -72,12 +72,12 @@
 		<?php endif; ?>	
 		
 		<?php if ($page['sidebar_first']): ?>
-			<aside class="hidden-sm col-md-3">
+			<aside class="sidebar_first hidden-sm col-md-3">
 				<?php print render($page['sidebar_first']); ?>
 			</aside>
 		<?php endif; ?>
 		
-			<div<?php if ($page['sidebar_first']): ?> class="col-sm-12 col-md-9"<?php endif; ?>>
+			<div<?php if (($page['sidebar_first']) && ($page['sidebar_second'])) { ?> class="col-sm-12 col-md-6"<?php } else if (($page['sidebar_first']) || ($page['sidebar_second'])) {?> class="col-sm-12 col-md-9" <?php } else {?><?php } ?>>
 				
 				<div id="alert"></div>
 								
@@ -95,7 +95,7 @@
 
 			
 		<?php if ($page['sidebar_second']): ?>
-			<aside class="sidebar_second newsdetail">
+			<aside class="sidebar_second col-sm-12 col-md-3">
 				<?php print render($page['sidebar_second']); ?>
 			</aside>
 		<?php endif; ?>

@@ -249,7 +249,8 @@ section.tags a:hover {background: #2750A0; color: #fff;}
 img.right {float: right; margin: 0px 0px 2em 2em;}
 img.left {float: left; margin: 0px 2px 2em 0em;}
 
-aside.sidebar_first {display: inline-block; vertical-align: top;}
+aside.sidebar_first,
+aside.sidebar_second {display: inline-block; vertical-align: top;}
 #block-menu-block-1 ul.menu {margin: .5em 5% 0 0; padding: 0; display: block;}
 #block-menu-block-1 ul.menu li {list-style: none; margin: 0; padding: 0;}
 #block-menu-block-1 ul.menu li {background: #f0f0f0;}
@@ -266,8 +267,6 @@ aside.sidebar_first {display: inline-block; vertical-align: top;}
 #block-menu-block-1 ul.menu li ul.menu li:hover,
 #block-menu-block-1 ul.menu li ul.menu li:focus {}
 #block-menu-block-1 ul.menu li ul.menu li a:before {content: "\e092"; color: #333; font-family: "Glyphicons Halflings"; font-size: 0.7em; margin: 0 7px 0 0; display: inline; text-decoration: none;}
-
-div.with_sidebar_first {width: 68%; display: inline-block;}
 
 }
 
