@@ -19,16 +19,20 @@
 	<meta name="dcterms.modified" title="W3CDTF" content="2014-10-20" />
 	<meta name="dcterms.subject" title="scheme" content="Nova Scotia; Employment; Travel; Immigration; Citizenship; Maritime Provinces; Acadian; Agriculture; Aquaculture; Communities; Culture; Community Services; Economic Development; Education; Energy; Environment; Finance; Fisheries; Gaelic; Heritage; Health; Justice; Labour; Legislature; Museums; Natural Resources; Procurement; Public Service; Seniors; Transportation; Tenders; Vital Statistics; Workers Compensation" />
 
-	<!--[if gte IE 9 | !IE ]><!--> <link href="<?php echo $theme_base; ?>/assets/favicon.ico" rel="icon" type="image/x-icon"/>
-	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/wet-boew.css"/> <!--<![endif]-->
+	<!--[if gte IE 9 | !IE ]><!--> 
+	<link href="<?php echo $theme_base; ?>/assets/favicon.ico" rel="icon" type="image/x-icon"/>
+	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/wet-boew.css"/> 
+	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/theme.css" />
+	<!--<![endif]-->
 
 	<!--[if lt IE 9]>
 	<link href="<?php echo $theme_base; ?>/assets/favicon.ico" rel="shortcut icon" />
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/ie8-wet-boew.css" />
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/ie8-theme.css" />
+	<script src="<?php echo $theme_base; ?>/js/jquery-1.11.1.js"></script>
 	<script src="<?php echo $theme_base; ?>/js/ie8-wet-boew.js"></script>
 
-	<script lang="javascript">
+	<script type="text/javascript">
 $(function(){		
 	if(!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Shape", "1.0")){
 		var imgs = $('img'),
@@ -53,9 +57,6 @@ $(function(){
 <!-- From Chester -->
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/fonts/fonts.css" type="text/css" />
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/style.css" type="text/css" media="all" />
-	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/theme.css"/>
-	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/news.css" type="text/css" media="all" />
-	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/mediaviewer.css" type="text/css" media="all" />
 
 	<?php
 		if (user_access('administer site configuration')) {
@@ -63,7 +64,6 @@ $(function(){
 		}
 	?>
 	
-	<link href="<?php echo $theme_base; ?>/favicon.ico" rel="icon" type="image/x-icon" />
 <!-- / From Chester -->
 		
 </head>
