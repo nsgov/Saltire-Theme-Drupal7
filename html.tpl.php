@@ -19,14 +19,10 @@
 	<meta name="dcterms.modified" title="W3CDTF" content="2014-10-20" />
 	<meta name="dcterms.subject" title="scheme" content="Nova Scotia; Employment; Travel; Immigration; Citizenship; Maritime Provinces; Acadian; Agriculture; Aquaculture; Communities; Culture; Community Services; Economic Development; Education; Energy; Environment; Finance; Fisheries; Gaelic; Heritage; Health; Justice; Labour; Legislature; Museums; Natural Resources; Procurement; Public Service; Seniors; Transportation; Tenders; Vital Statistics; Workers Compensation" />
 
-	<!--[if gte IE 9 | !IE ]><!--> 
-	<link href="<?php echo $theme_base; ?>/assets/favicon.ico" rel="icon" type="image/x-icon"/>
+	<!--[if gte IE 9 | !IE ]><!--><!--<![endif]-->
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/wet-boew.css"/> 
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/theme.css" />
-	<!--<![endif]-->
-
 	<!--[if lt IE 9]>
-	<link href="<?php echo $theme_base; ?>/assets/favicon.ico" rel="shortcut icon" />
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/ie8-wet-boew.css" />
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/ie8-theme.css" />
 	<script src="<?php echo $theme_base; ?>/js/jquery-1.11.1.js"></script>
@@ -57,6 +53,9 @@ $(function(){
 <!-- From Chester -->
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/fonts/fonts.css" type="text/css" />
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/style.css" type="text/css" media="all" />
+	
+	
+	<link href="<?php echo $theme_base; ?>/assets/favicon.ico" rel="icon" type="image/x-icon"/>
 
 	<?php
 		if (user_access('administer site configuration')) {
@@ -86,7 +85,6 @@ $(function(){
 <script src="<?php echo $theme_base; ?>/js/wet-boew.js"></script>
 <!--<![endif]-->
 <!--[if lt IE 9]>
-<script src="<?php echo $theme_base; ?>/js/jquery-1.11.1.js"></script>
 <script src="<?php echo $theme_base; ?>/js/ie8-wet-boew2.js"></script>
 <![endif]-->
 </body>

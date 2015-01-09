@@ -8,7 +8,7 @@
  Default Mixins and namespace variables
  */
 
-body {font-family: 'robotoregular', Helvetica, Arial, Tahoma, sans-serif; background: url(../img/bg-hdr.svg) center top no-repeat #fff;}
+body {font-family: 'robotoregular', Helvetica, Arial, Tahoma, sans-serif; background: url(../img/bg-hdr.svg) center top no-repeat #fff; padding: 0px;}
 
 h1                            { font-size: 3em; line-height: 1;}
 h2                            { font-size: 2.5em; line-height: 1.125; clear: both;}
@@ -39,6 +39,11 @@ main a:hover, main a:focus, a:active {background: #F6CF64; text-decoration: none
 
 h2.element-invisible {visibility: hidden;}
 
+/* Accessibility titles */
+#wb-glb-mn h2, 
+#wb-tphp,
+#wb-sm .nvbar h2,
+#wb-info h2 {visibility: hidden; height: 0px;}
 
 /*
  Views
@@ -143,109 +148,6 @@ section.tags a:hover {background: #2750A0; color: #fff;}
 
 #block-system-main article img {margin-bottom: 1.5em;}
 
-/* ====================================
-	HOMEPAGE GRID - SMALL SCREEN
-==================================== */
-
- .view-homepage-grid .views-row,
- .view-taxonomy-term .views-row {width: 46%; display: inline-block; margin: 2em 2% 2% 0; background: #f0f0f0; color: #fff;}
- .view-homepage-grid .views-row:hover, .view-homepage-grid .views-row:focus,
- .view-taxonomy-term .views-row:hover, .view-taxonomy-term .views-row:focus {background: #2750A0; color: #fff;}
- .view-homepage-grid .views-row:hover a, .view-homepage-grid .views-row:focus a,
- .view-taxonomy-term .views-row:hover a, .view-taxonomy-term .views-row:focus a {color: #F6CF64;}
- .view-homepage-grid .views-row:hover h2, .view-homepage-grid .views-row:focus h2,
- .view-taxonomy-term .views-row:hover h2, .view-taxonomy-term .views-row:focus h2 {color: #fff;}
- .view-homepage-grid .views-row .views-field,
- .view-taxonomy-term .views-row .views-field {margin: 20px;}
- .view-homepage-grid .views-row img,
- .view-taxonomy-term .views-row img {width: 100%; height: auto;}
-
- .view-homepage-grid .views-row-2,
- .view-homepage-grid .views-row-5,
- .view-homepage-grid .views-row-8,
- .view-homepage-grid .views-row-11,
- .view-homepage-grid .views-row-14,
- .view-homepage-grid .views-row-17,
- .view-homepage-grid .views-row-20,
- .view-homepage-grid .views-row-23,
- .view-taxonomy-term .views-row-2,
- .view-taxonomy-term .views-row-5,
- .view-taxonomy-term .views-row-8,
- .view-taxonomy-term .views-row-11,
- .view-taxonomy-term .views-row-14,
- .view-taxonomy-term .views-row-17,
- .view-taxonomy-term .views-row-20,
- .view-taxonomy-term .views-row-23 {width: 32%; vertical-align: top;}
-
- .view-homepage-grid .views-row-2 h2,
- .view-homepage-grid .views-row-5 h2,
- .view-homepage-grid .views-row-8 h2,
- .view-homepage-grid .views-row-11 h2,
- .view-homepage-grid .views-row-14 h2,
- .view-homepage-grid .views-row-17 h2,
- .view-homepage-grid .views-row-20 h2,
- .view-homepage-grid .views-row-23 h2,
- .view-taxonomy-term .views-row-2 h2,
- .view-taxonomy-term .views-row-5 h2,
- .view-taxonomy-term .views-row-8 h2,
- .view-taxonomy-term .views-row-11 h2,
- .view-taxonomy-term .views-row-14 h2,
- .view-taxonomy-term .views-row-17 h2,
- .view-taxonomy-term .views-row-20 h2,
- .view-taxonomy-term .views-row-23 h2 {font-size: 1.2em;}
-
- .view-homepage-grid .views-row-3,
- .view-homepage-grid .views-row-4,
- .view-homepage-grid .views-row-9,
- .view-homepage-grid .views-row-10,
- .view-homepage-grid .views-row-15,
- .view-homepage-grid .views-row-16,
- .view-homepage-grid .views-row-21,
- .view-homepage-grid .views-row-22,
- .view-taxonomy-term .views-row-3,
- .view-taxonomy-term .views-row-4,
- .view-taxonomy-term .views-row-9,
- .view-taxonomy-term .views-row-10,
- .view-taxonomy-term .views-row-15,
- .view-taxonomy-term .views-row-16,
- .view-taxonomy-term .views-row-21,
- .view-taxonomy-term .views-row-22 {width: 46%; vertical-align: top;}
-
- .view-homepage-grid .views-row-3 h2,
- .view-homepage-grid .views-row-4 h2,
- .view-homepage-grid .views-row-9 h2,
- .view-homepage-grid .views-row-10 h2,
- .view-homepage-grid .views-row-15 h2,
- .view-homepage-grid .views-row-16 h2,
- .view-homepage-grid .views-row-21 h2,
- .view-homepage-grid .views-row-22 h2,
- .view-taxonomy-term .views-row-3 h2,
- .view-taxonomy-term .views-row-4 h2,
- .view-taxonomy-term .views-row-9 h2,
- .view-taxonomy-term .views-row-10 h2,
- .view-taxonomy-term .views-row-15 h2,
- .view-taxonomy-term .views-row-16 h2,
- .view-taxonomy-term .views-row-21 h2,
- .view-taxonomy-term .views-row-22 h2 {font-size: 1.5em;}
-
- .view-homepage-grid .views-row-1,
- .view-homepage-grid .views-row-6,
- .view-homepage-grid .views-row-7,
- .view-homepage-grid .views-row-12,
- .view-homepage-grid .views-row-13,
- .view-homepage-grid .views-row-18,
- .view-homepage-grid .views-row-19,
- .view-homepage-grid .views-row-24,
- .view-taxonomy-term .views-row-1,
- .view-taxonomy-term .views-row-6,
- .view-taxonomy-term .views-row-7,
- .view-taxonomy-term .views-row-12,
- .view-taxonomy-term .views-row-13,
- .view-taxonomy-term .views-row-18,
- .view-taxonomy-term .views-row-19,
- .view-taxonomy-term .views-row-24 {width: 62%; vertical-align: top;}
-
-
 img.right {float: right; margin: 0px 0px 2em 2em;}
 img.left {float: left; margin: 0px 2px 2em 0em;}
 
@@ -272,15 +174,6 @@ div.with_sidebar_first {width: 68%; display: inline-block;}
 
 /* Extra-small view and under */
 @media screen and (max-width: 480px) {
-
-/* ====================================
-	HOMEPAGE GRID - TWO COLUMNS
-==================================== */
-
- .view-homepage-grid .views-row,
- .view-taxonomy-term .views-row {width: 98%; display: inline-block; margin: 0 0 2% 0;}
- .view-homepage-grid .views-row img
- .view-taxonomy-term .views-row img {width: 100%; height: auto; max-width: 480px;}
 
  nav.breadcrumb {display: none;}
 
