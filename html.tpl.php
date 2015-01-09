@@ -4,13 +4,10 @@
 	$secure = 'http' . (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? 's' : '') . '://';
     $theme_base = str_replace('http://', $secure, $theme_base);
 ?>
-<!-- From WET -->
 <!DOCTYPE html>
-<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js" lang="en" dir="ltr">
 <head>
-<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title><?php print $head_title; ?></title>
 	<meta content="width=device-width, initial-scale=1" name="viewport"/>
 	<meta name="HandheldFriendly" content="True" />
@@ -22,13 +19,33 @@
 	<meta name="dcterms.modified" title="W3CDTF" content="2014-10-20" />
 	<meta name="dcterms.subject" title="scheme" content="Nova Scotia; Employment; Travel; Immigration; Citizenship; Maritime Provinces; Acadian; Agriculture; Aquaculture; Communities; Culture; Community Services; Economic Development; Education; Energy; Environment; Finance; Fisheries; Gaelic; Heritage; Health; Justice; Labour; Legislature; Museums; Natural Resources; Procurement; Public Service; Seniors; Transportation; Tenders; Vital Statistics; Workers Compensation" />
 
-	<!--[if gte IE 9 | !IE ]><!--> <link href="./assets/favicon.ico" rel="icon" type="image/x-icon"/>
-	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/wet-boew.css"/> <!--<![endif]-->
-
+	<!--[if gte IE 9 | !IE ]><!--><!--<![endif]-->
+	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/wet-boew.css"/> 
+	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/theme.css" />
 	<!--[if lt IE 9]>
-	<link href="./assets/favicon.ico" rel="shortcut icon" />
-	<link rel="stylesheet" href="./css/ie8-wet-boew.css" />
+	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/ie8-wet-boew.css" />
+	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/ie8-theme.css" />
+	<script src="<?php echo $theme_base; ?>/js/jquery-1.11.1.js"></script>
+	<script src="<?php echo $theme_base; ?>/js/ie8-wet-boew.js"></script>
+
+	<script type="text/javascript">
+$(function(){		
+	if(!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Shape", "1.0")){
+		var imgs = $('img'),
+			endsWithDotSvg = /.*\.svg$/,
+			l = imgs.length;
+		for(var x = 0; x !== l; ++x) {
+			if(imgs[x].src.match(endsWithDotSvg)) {
+				imgs[x].src = imgs[x].src.slice(0, -3) + 'png';
+			}
+		}
+	}
+
+});		
+	</script>
+	
 	<![endif]-->
+
 
 	<noscript><link rel="stylesheet" href="<?php echo $theme_base; ?>/css/noscript.css"/></noscript>
 <!-- / From WET -->
@@ -36,9 +53,9 @@
 <!-- From Chester -->
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/fonts/fonts.css" type="text/css" />
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/style.css" type="text/css" media="all" />
-	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/theme.css"/>
-	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/news.css" type="text/css" media="all" />
-	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/mediaviewer.css" type="text/css" media="all" />
+	
+	
+	<link href="<?php echo $theme_base; ?>/assets/favicon.ico" rel="icon" type="image/x-icon"/>
 
 	<?php
 		if (user_access('administer site configuration')) {
@@ -46,7 +63,6 @@
 		}
 	?>
 	
-	<link href="<?php echo $theme_base; ?>/favicon.ico" rel="icon" type="image/x-icon" />
 <!-- / From Chester -->
 		
 </head>
@@ -69,7 +85,6 @@
 <script src="<?php echo $theme_base; ?>/js/wet-boew.js"></script>
 <!--<![endif]-->
 <!--[if lt IE 9]>
-<script src="/sites/all/themes/saltire/js/jquery-1.11.1.js"></script>
 <script src="<?php echo $theme_base; ?>/js/ie8-wet-boew2.js"></script>
 <![endif]-->
 </body>

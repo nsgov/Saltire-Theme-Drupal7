@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+/* Replace SVG background with PNG */
+
+body {font-family: 'robotoregular', Helvetica, Arial, Tahoma, sans-serif; background: url(../img/bg-hdr.png) center top no-repeat #fff;}
+#searchButton {background: #9fcd72 url(../img/icon-search.png) top left no-repeat; width: 36px; text-indent: -9999em; color: #fff; border: none; padding: 5px 10px;}
+#searchButton-imprt {background: #9fcd72 url(../img/icon-search.png) top left no-repeat; width: 36px; text-indent: -9999em; color: #fff; border: none; padding: 5px 10px;}
+footer {background: url(../img/bg-footer.png) top center no-repeat;}
+#mb-pnl {background: #fff url(../img/bg-mb-pnl.png) left top no-repeat;}
