@@ -151,7 +151,8 @@ section.tags a:hover {background: #2750A0; color: #fff;}
 img.right {float: right; margin: 0px 0px 2em 2em;}
 img.left {float: left; margin: 0px 2px 2em 0em;}
 
-aside.sidebar_first {display: inline-block; vertical-align: top;}
+aside.sidebar_first,
+aside.sidebar_second {display: inline-block; vertical-align: top;}
 #block-menu-block-1 ul.menu {margin: .5em 5% 0 0; padding: 0; display: block;}
 #block-menu-block-1 ul.menu li {list-style: none; margin: 0; padding: 0;}
 #block-menu-block-1 ul.menu li a {color: #2750A0; padding: 5px 20px 5px 0; display: block; text-decoration: none;}
@@ -166,8 +167,6 @@ aside.sidebar_first {display: inline-block; vertical-align: top;}
 #block-menu-block-1 ul.menu li.expanded a:before {content: "\e114"; color: #333; font-family: "Glyphicons Halflings"; font-size: 0.6em; margin: 0 4px 0 -14px; display: inline; text-decoration: none;}
 #block-menu-block-1 ul.menu li.expanded ul.menu li a:before {content: none;}
 #block-menu-block-1 ul.menu li a.active {font-weight: bold;}
-
-div.with_sidebar_first {width: 68%; display: inline-block;}
 
 }
 
