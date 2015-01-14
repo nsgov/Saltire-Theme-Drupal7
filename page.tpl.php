@@ -65,6 +65,12 @@
 			<?php if ($breadcrumb): ?><?php print $breadcrumb; ?><?php endif;?>
 		</nav>
 		
+	        <?php if ($messages): ?>
+	          <div id="console" class="clearfix"><?php print $messages; ?></div>
+	        <?php endif; ?>
+	
+	        <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>    		
+		
 		<?php if ($page['content_top']): ?>
 			<section class="content_top">
 				<?php print render($page['content_top']); ?>
@@ -88,7 +94,9 @@
 					print render($title_suffix);
 				}
 				
-					if (!empty($tabs['#primary'])): ?><div class="tabs-wrapper clearfix"><?php print render($tabs); ?></div><?php endif;
+					if (!empty($tabs['#primary'])): ?><div class="tabs-wrapper clearfix">
+					
+					<?php print render($tabs); ?></div><?php endif;
 					print render($page['content']); ?>
 				
 			</div>
