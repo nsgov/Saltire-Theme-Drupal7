@@ -25,12 +25,16 @@ function saltire_breadcrumb($variables) {
     // screen-reader users. Make the heading invisible with .element-invisible.
     
       $crumbs = '<ol><li><a href="http://www.novascotia.ca">novascotia.ca</a></li><li><a href="/">' . $site_name . '</a></li>';
-      foreach(
-$breadcrumb as $value) {
-           $crumbs .= '<li>'.$value.'</li>';
-      }
-      $crumbs .= '</ol>';
-    }
-      return $crumbs;
+				
+		if (!empty($crumbs)) {      
+			      foreach(
+				  	$breadcrumb as $value) {
+			           $crumbs .= '<li>'.$value.'</li>';
+					}
+				
+		      $crumbs .= '</ol>';
+		    }
+		      return $crumbs;
+		}
   }
 ?>
