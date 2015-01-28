@@ -117,15 +117,19 @@
 		</main>
 		
 		<footer role="contentinfo" id="wb-info" class="visible-md visible-lg wb-navcurr">
-			<div class="container">
-				<nav role="navigation" class="row">
-				<h2>NovaScotia.ca Sections</h2>
-
 				<?php if ($page['footer']): ?>
-					<?php print render($page['footer']); ?>
+					<div class="local">
+							<?php print render($page['footer']); ?>
+					</div>
 				<?php endif; ?>
-				</nav>
+			<div class="container">
+				<section>
+					<nav role="navigation" aria-label="global-navigation" class="row">
+					<h2>NovaScotia.ca Sections</h2>
+					<div class="row"><div class="col-sm-9 col-lg-9"><section class="col-sm-6 col-lg-4"><h3>Government</h3><ul class="list-unstyled"> <li><a href="http://novascotia.ca/government/"  class="gl-footer">Locations, Depts, Agencies</a></li> <li><a href="https://novascotia.ca/contact/#phone" class="gl-footer">Phone numbers</a></li><li><a href="http://nslegislature.ca/">Legislature</a></li> </ul> </section> <section class="col-sm-6 col-lg-4"> <h3>Residents</h3> <ul class="list-unstyled"> <li><a href="http://novascotia.ca/snsmr/access/" class="gl-footer">Access Nova Scotia</a></li> <li><a href="http://511.gov.ns.ca/en/" class="gl-footer">Road conditions - 511</a></li> <li><a href="http://novascotia.ca/tran/cameras/" class="gl-footer">Highway webcams</a></li> </ul> </section> <section class="col-sm-6 col-lg-4"> <h3>Visitors</h3> <ul class="list-unstyled"> <li><a href="http://www.novascotia.com/">Official Travel site</a></li> <li><a href="https://museum.novascotia.ca/our-museums">Museums</a></li> <li><a href="http://parks.gov.ns.ca/">Provincial Parks</a></li> </ul> </section> <section class="col-sm-6 col-lg-4"> <h3>Business</h3> <ul class="list-unstyled"> <li><a href="http://business.novascotia.ca/en/home/default.aspx">Doing Business in NS</a></li><li><a href="http://novascotia.ca/snsmr/access/business/bizpal.asp">Licences and Permits (BizPaL)</a></li> </ul> </section> <section class="col-sm-6 col-lg-4"> <h3>Health care</h3> <ul class="list-unstyled"> <li><a href="http://811.novascotia.ca/">Speak to a nurse - 811</a></li> <li><a href="http://www.cdha.nshealth.ca/maps?category=Hospital&amp;title=">Hospitals/ERs</a></li> <li><a href="http://www.doctorsns.com/en/home/yourhealth/walk-in-clinics.aspx">Clinics</a></li>	 </ul> </section> </div> <div class="col-sm-3 col-lg-3 brdr-lft"><section> <h3>About Nova Scotia</h3> <p><a href="http://novascotia.ca/about/">General information</a></p> </section> <section> <h3>Contact us</h3> <p><a href="https://novascotia.ca/contact/">Contact novascotia.ca</a></p> </section> <section> <h3>Social media</h3> <p><a href="http://novascotia.ca/connect/">Government accounts</a></p> </section></div></nav>
+				</section>
 			</div>
+
 			<div role="contentinfo" aria-label="copyright" class="copyright">
 				<p><a href="/cns/privacy/">Privacy</a> 
 				<a href="/terms/">Terms</a> 
