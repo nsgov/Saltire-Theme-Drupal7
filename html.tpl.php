@@ -19,9 +19,9 @@
 	<meta name="dcterms.modified" title="W3CDTF" content="2014-10-20" />
 	<meta name="dcterms.subject" title="scheme" content="Nova Scotia; Employment; Travel; Immigration; Citizenship; Maritime Provinces; Acadian; Agriculture; Aquaculture; Communities; Culture; Community Services; Economic Development; Education; Energy; Environment; Finance; Fisheries; Gaelic; Heritage; Health; Justice; Labour; Legislature; Museums; Natural Resources; Procurement; Public Service; Seniors; Transportation; Tenders; Vital Statistics; Workers Compensation" />
 
-	<!--[if gte IE 9 | !IE ]><!--><!--<![endif]-->
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/wet-boew.css"/> 
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/theme.css" />
+	<link rel="StyleSheet" type="text/css" href="<?php echo $theme_base; ?>/css/twitterfeed.css" />
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/ie8-wet-boew.css" />
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/ie8-theme.css" />
@@ -80,12 +80,16 @@ $(function(){
 	?>
 
 	<!-- INSERT GOOGLE ANALYTICS TRACKING CODE -->
-		<!--[if gte IE 9 | !IE ]><!-->
+	
+<!--[if gte IE 9 | !IE ]><!-->
 <script src="<?php echo $theme_base; ?>/js/jquery-2.1.1.js"></script>
 <script src="<?php echo $theme_base; ?>/js/wet-boew.js"></script>
 <!--<![endif]-->
+
 <!--[if lt IE 9]>
 <script src="<?php echo $theme_base; ?>/js/ie8-wet-boew2.js"></script>
 <![endif]-->
+
+<script src="<?php echo $theme_base; ?>/js/twitterfeed.js"></script>
 </body>
 </html>
