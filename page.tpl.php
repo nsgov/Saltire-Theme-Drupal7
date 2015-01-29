@@ -78,7 +78,7 @@
 		<?php endif; ?>	
 		
 		<?php if ($page['sidebar_first']): ?>
-			<aside class="sidebar_first hidden-sm col-md-3">
+			<aside class="sidebar_first hidden-xs hidden-sm col-md-3">
 				<?php print render($page['sidebar_first']); ?>
 			</aside>
 		<?php endif; ?>
