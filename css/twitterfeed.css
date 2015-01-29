@@ -1,0 +1,132 @@
+
+.twitterfeed {
+	border-radius: 8px;
+	color: #444;
+	font: 12px sans-serif;
+	overflow: hidden;
+}
+
+.twitterfeed-header, .tweet {
+	background: #eee;
+	background-color: rgba(255,255,255,0.7);
+	border-bottom: 1px dotted #ddd;
+	-webkit-transition: background-color 0.4s;
+	transition: background-color 0.4s;
+}
+
+.twitterfeed-header:hover, .tweet:hover {
+	background-color: rgba(255,255,255,0.9);
+}
+
+.twitterfeed-header {
+	background-image: url(bird_blue_16.png);
+	background-repeat: no-repeat;
+	background-position: 8px center;
+	padding: 8px 8px 8px 32px;
+}
+
+.tweet {
+	clear: left;
+	margin: 1px 0;
+	padding: 8px;
+}
+
+.tweeter, .tweet-time, .tweet-action {
+	text-decoration: none;
+}
+
+.tweeter:focus .tweeter-name,
+.tweeter:hover .tweeter-name,
+.tweeter:focus .tweeter-screenname,
+.tweeter:hover .tweeter-screenname,
+.tweet-time:focus, .tweet-time:hover,
+.tweet-action:focus, .tweet-action:hover {
+	text-decoration: underline;
+}
+
+.tweeter-avatar {
+	border: 1px solid #fff;
+	border-radius: 5px;
+	box-shadow: 0px 0px 6px #fff;
+	float: left;
+	margin: 0 8px 3em 0;
+	overflow: hidden;
+	width: 48px;
+	height: 48px;
+	-webkit-transition: box-shadow 0.4s;
+	transition: box-shadow 0.2s;
+}
+
+.tweeter:focus .tweeter-avatar, .tweeter:hover .tweeter-avatar {
+	border: 1px solid #777;
+	box-shadow: 2px 2px 8px #aaa;
+}
+
+.tweeter-name {
+	color: #555;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.tweeter-screenname {
+	color: #777;
+	font-style: italic;
+}
+
+.tweet-time {
+	color: #999;
+	float: right;
+	font-style: italic;
+	margin-left: 1em;
+}
+
+.tweet .tweet-text {
+	clear: right;
+	display: block;
+	margin: 0 0 0 56px;
+	padding: 2px 0;
+}
+
+.retweetedby {
+	color: #777;
+	font-style: italic;
+	margin: -4px 0 0;
+}
+
+.tweet-actions {
+	font-size: 12px;
+	margin: 0 -8px;
+	text-align: right;
+}
+
+.tweet-action, .tweet-action:link {
+	color: #777;
+	padding: 2px 1em 2px 0;
+	white-space: nowrap;
+}
+.tweet-action:focus, .tweet-action:hover {
+	color: #444;
+}
+
+.tweet-icon {
+	background-image: url(everything-spritev2.png);
+	background-repeat: no-repeat;
+	background-position: 0px 2px;
+	display: inline-block;
+	margin-top: 2px;
+	width: 16px;
+	height: 16px;
+}
+.retweetedby   .tweet-icon { background-position: -80px 2px; }
+.tweet-reply:focus .tweet-icon, .tweet-reply:hover .tweet-icon {
+	background-position: -16px 2px;
+}
+.tweet-retweet .tweet-icon { background-position: -80px 2px; }
+.tweet-retweet:focus .tweet-icon, .tweet-retweet:hover .tweet-icon {
+	background-position: -96px 2px;
+}
+.tweet-fav       .tweet-icon { background-position: -32px 1px; }
+.tweet-fav:focus .tweet-icon, .tweet-fav:hover .tweet-icon {
+	background-position: -48px 1px;
+}
