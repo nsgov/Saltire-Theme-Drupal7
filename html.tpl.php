@@ -3,6 +3,7 @@
 	$theme_base = $base_url . '/' . drupal_get_path('theme', $GLOBALS['theme']);
 	$secure = 'http' . (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? 's' : '') . '://';
     $theme_base = str_replace('http://', $secure, $theme_base);
+    header("X-UA-Compatible: IE=edge");
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en" dir="ltr">
@@ -18,10 +19,12 @@
 	<meta name="dcterms.issued" title="W3CDTF" content="2014-10-20" />
 	<meta name="dcterms.modified" title="W3CDTF" content="2014-10-20" />
 	<meta name="dcterms.subject" title="scheme" content="Nova Scotia; Employment; Travel; Immigration; Citizenship; Maritime Provinces; Acadian; Agriculture; Aquaculture; Communities; Culture; Community Services; Economic Development; Education; Energy; Environment; Finance; Fisheries; Gaelic; Heritage; Health; Justice; Labour; Legislature; Museums; Natural Resources; Procurement; Public Service; Seniors; Transportation; Tenders; Vital Statistics; Workers Compensation" />
-
+	
+	<?php print $styles; ?>
+	
+<!-- / From WET -->
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/wet-boew.css"/> 
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/theme.css" />
-	<link rel="StyleSheet" type="text/css" href="<?php echo $theme_base; ?>/css/twitterfeed.css" />
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/ie8-wet-boew.css" />
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/ie8-theme.css" />
@@ -46,22 +49,13 @@ $(function(){
 	
 	<![endif]-->
 
-
 	<noscript><link rel="stylesheet" href="<?php echo $theme_base; ?>/css/noscript.css"/></noscript>
 <!-- / From WET -->
 
 <!-- From Chester -->
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/fonts/fonts.css" type="text/css" />
-	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/style.css" type="text/css" media="all" />
-	
-	
+	<link rel="stylesheet" type="text/css" href="<?php echo $theme_base; ?>/css/twitterfeed.css" />
 	<link href="<?php echo $theme_base; ?>/assets/favicon.ico" rel="icon" type="image/x-icon"/>
-
-	<?php
-		if (user_access('administer site configuration')) {
-			print $styles;
-		}
-	?>
 	
 <!-- / From Chester -->
 		
@@ -73,13 +67,9 @@ $(function(){
 
 	<?php print $page_bottom; ?>
 	
-	<?php
-		if (user_access('administer site configuration')) {
-			print $scripts;
-		}
-	?>
+	<?php print $scripts; ?>
 
-	<!-- INSERT GOOGLE ANALYTICS TRACKING CODE -->
+<!-- INSERT GOOGLE ANALYTICS TRACKING CODE -->
 	
 <!--[if gte IE 9 | !IE ]><!-->
 <script src="<?php echo $theme_base; ?>/js/jquery-2.1.1.js"></script>
