@@ -14,5 +14,17 @@ TO INSTALL:
 
 -----------------------------------------------------------------------
 
+ENABLE GSA SEARCH:
+
+1. Under Structure > Blocks, add a new block.
+2. Paste in the following*:
+
+<form role="search" method="get" action="http://www.novascotia.ca/snsmr/gsa2.asp"><input type="text" id="gsa" name="q" placeholder="Search novascotia.ca" /><button type="submit" id="searchButton" name="btnG">Search</button><input value="GOVNS" name="client" type="hidden"><input value="GOVNS" name="proxystylesheet" type="hidden"><input name="site" value="GOVNS" type="hidden"><input name="c" id="c" value="contact/" type="hidden"><input name="h" id="h" value="Government of Nova Scotia" type="hidden"><input name="i" id="i" value="img/banner1.jpg" type="hidden"><input name="j" id="j" value="" type="hidden"><input name="n" id="n" value="Contact Webmaster" type="hidden"><input value="1" id="proxyreload" name="proxyreload" type="hidden"><input value="xml_no_dtd" name="output" type="hidden"></form>
+
+* Ensure that the text format selected is Full HTML.  If you are using a WYSIWYG editor, 
+  ensure that you paste the HTML into Source view.
+
+-----------------------------------------------------------------------
+
 Theme is based on the Government of Canada's Web Experience Toolkit (WET) and
 distributed under MIT License.
