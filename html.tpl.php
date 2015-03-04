@@ -1,8 +1,4 @@
 <?php
-	global $base_url;
-	$theme_base = $base_url . '/' . drupal_get_path('theme', $GLOBALS['theme']);
-	$secure = 'http' . (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? 's' : '') . '://';
-    $theme_base = str_replace('http://', $secure, $theme_base);
     header("X-UA-Compatible: IE=edge");
 ?>
 <!DOCTYPE html>

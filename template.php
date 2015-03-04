@@ -69,5 +69,29 @@ function saltire_menu_link__main_menu($variables) {
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }  
-  
+
+/**
+ * Override or insert variables into the html template.
+ */
+function saltire_preprocess_html(&$variables, $hook) {
+  _saltire_set_path($variables);
+}
+
+/**
+ * Override or insert variables into the page template.
+ */
+function saltire_preprocess_page(&$variables, $hook) {
+  _saltire_set_path($variables);
+}
+
+/**
+ * Helper function to set the path to the theme for templates.
+ */
+function _saltire_set_path(&$variables) {
+  $variables['base_path'] = base_path();
+  $variables['theme_base'] = drupal_get_path('theme', 'saltire');
+  $secure = 'http' . (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? 's' : '') . '://';
+  $variables['theme_base'] = str_replace('http://', $secure, $variables['theme_base']);
+}
+
 ?>
