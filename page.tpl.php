@@ -1,10 +1,3 @@
-<?php
-	global $base_url;
-	$theme_base = $base_url . '/' . drupal_get_path('theme', $GLOBALS['theme']);
-	$secure = 'http' . (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? 's' : '') . '://';
-    $theme_base = str_replace('http://', $secure, $theme_base);
-?>
-
 		<ul id="wb-tphp">
 			<li class="wb-slc">
 				<a class="wb-sl" href="#wb-cont">Skip to main content</a>
