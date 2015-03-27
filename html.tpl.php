@@ -21,6 +21,7 @@
 <!-- / From WET -->
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/wet-boew.css"/> 
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/theme.css" />
+	<link rel="StyleSheet" type="text/css" href="<?php echo $theme_base; ?>/css/twitterfeed.css" />
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/ie8-wet-boew.css" />
 	<link rel="stylesheet" href="<?php echo $theme_base; ?>/css/ie8-theme.css" />
