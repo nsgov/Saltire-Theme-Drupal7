@@ -1,4 +1,8 @@
 <?php
+	global $base_url;
+	$theme_base = $base_url . '/' . drupal_get_path('theme', $GLOBALS['theme']);
+	$secure = 'http' . (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? 's' : '') . '://';
+    $theme_base = str_replace('http://', $secure, $theme_base);
     header("X-UA-Compatible: IE=edge");
 ?>
 <!DOCTYPE html>
@@ -69,7 +73,6 @@ $(function(){
 <!-- INSERT GOOGLE ANALYTICS TRACKING CODE -->
 	
 <!--[if gte IE 9 | !IE ]><!-->
-<script src="<?php echo $theme_base; ?>/js/jquery-2.1.1.js"></script>
 <script src="<?php echo $theme_base; ?>/js/wet-boew.js"></script>
 <!--<![endif]-->
 

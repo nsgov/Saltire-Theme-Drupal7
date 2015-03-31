@@ -1,6 +1,6 @@
-Author: Communications Nova Scotia (commtech@novascotia.ca)
+Author: Communications Nova Scotia
 
-Last Updated: December 30th, 2014 by Allan Lawlor.
+Last Updated: March 2015 by Kayte McLaughlin.
 
 Nova Scotia "Saltire" look and feel, Drupal Theme for Drupal 7.x
 
