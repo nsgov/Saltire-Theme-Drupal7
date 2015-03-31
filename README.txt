@@ -1,4 +1,4 @@
-Author: Communications Nova Scotia (commtech@novascotia.ca)
+Author: Communications Nova Scotia
 
 Last Updated: December 30th, 2014 by Allan Lawlor.
 
